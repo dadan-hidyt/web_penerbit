@@ -25,7 +25,7 @@ export default function Navbar({ props }) {
                         <NavLink active={false}><i className="fa fa-question"></i>&nbsp;Profile</NavLink>
                     </ul>
                    <div className="d-flex">
-                    <button className="btn btn-outline-primary"><i className="fa fa-user"></i>&nbsp;Kontak</button>
+                    <button className="btn btn-warning text-white"><i className="fa fa-user"></i>&nbsp;Kontak</button>
                    </div>
                 </div>
             </div>

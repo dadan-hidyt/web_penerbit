@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export default function CardBukuItem({ props }) {
     return <>
         <div className="col-6 book_item col-md-2 mb-4">
@@ -6,7 +8,9 @@ export default function CardBukuItem({ props }) {
                 <div className="book_meta">
                     <span className="badge my-2 bg-warning">Pendidikan</span>
                     <span className="title  d-block">
-                        <a href=""><small>Pendidikan Bahasa...</small></a>
+                      <Link href={route('buku.detail',{id_buku:10,slug:"buku-pendidikan-agama-islam"})}>
+                        <small>Buku Pendidikan Aga...</small>
+                      </Link>
                     </span>
                     <span className="price my-1 fs-5 fw-bold text-primary d-block">
                         Rp. 50.000
