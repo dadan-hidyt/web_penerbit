@@ -1,3 +1,4 @@
+import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import { Head } from "@inertiajs/react";
 
@@ -9,6 +10,7 @@ export default function GuestLayout({ children,title = 'Home' }) {
         <main id="main_content" className="main">
         <Navbar/>
         {children}
+        <Footer />
         </main>
     </>
 }

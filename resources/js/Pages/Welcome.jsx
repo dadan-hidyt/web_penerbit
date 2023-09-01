@@ -35,7 +35,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <SectionTitle more={'Lihat Lainya'} link_more={'all'} title={'Buku Ekonomi'} subtitle={'Lihat buku kategori ekonomi'} />
                     <BukuEkonomi />
                 </div>
-                <Footer />
             </GuestLayout>
 
         </>

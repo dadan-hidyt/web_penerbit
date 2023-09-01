@@ -51,7 +51,15 @@ body{
     font-weight:bold;
     font-size:16px;
   }
-  
+  .detail_book .img_book img{
+    width:100%;
+    border-radius: 10px;
+  }
+  .detail-buku ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
   .footer-dark ul {
     padding:0;
     list-style:none;
