@@ -29,7 +29,7 @@ export default function DetailBuku({ children, auth, id_buku, slug }) {
                             </p>
                         </div>
                         <div className="detail-buku">
-                            <div className="fw-bold mb-2">Detail Buku</div>
+                            <div className="fw-bold mb-1">Detail Buku</div>
                             <ul className="d-flex justify-content-between m-none p-none">
                                 <li><div className="fw-bold">Author:</div> <span className="d-block"><i className="fa fa-user-o" style={{ 'margin-right':'5px' }}></i>Indra Dadan</span></li>
                                 <li><div className="fw-bold">ISBN:</div><span className="d-block">09220203</span></li>
