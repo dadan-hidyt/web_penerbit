@@ -12,4 +12,9 @@ class BukuController extends Controller
             'id_buku' => $id_buku,
         ]);
     }
+    public function katalog(){
+        return inertia('Katalog',[
+            'title' => "Katalog"
+        ]);
+    }
 }

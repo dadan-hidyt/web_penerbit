@@ -1,10 +1,12 @@
 import KategoriItem from "@/Components/KategoriItem"
+import { usePage } from "@inertiajs/react"
 
 export default function KategoriBukuSection({children,props}){
+    const {kategori: categories} = usePage().props;
     return <>
         <div className="row">
-            {[0,2,3,4,5,6,7].map(function(e){
-                return <KategoriItem key={e} />
+            {categories.map(function(e){
+                return <KategoriItem data={e} key={e.id} >{e.nama_kategori}</KategoriItem>
             })}
         </div>
     </>

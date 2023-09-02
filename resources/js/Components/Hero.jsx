@@ -83,9 +83,9 @@ export default function Hero({ props, children }) {
             </div>
             <img
                 src="/dadan.png"
-                className=" d-none hiro_image d-lg-block position-absolute"
+                className=" d-none d-lg-block position-absolute"
                 alt=""
-                style={{ zIndex: 1, left: "45%", bottom: "3%" }}
+                style={{ zIndex: 1, left: "45%", bottom: "-6%" }}
             />
         </section>
 

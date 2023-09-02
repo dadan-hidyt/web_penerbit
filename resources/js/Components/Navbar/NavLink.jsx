@@ -1,9 +1,9 @@
-export default function NavLink({props,children,active}) {
+import { Link } from "@inertiajs/react";
+
+export default function NavLink({props,children,active,link = ''}) {
     return <>
         <li className="nav-item">
-            <a className={`nav-link text-white ${active ? 'active' : ''}`} aria-current="page" href="#">
-                {children}
-            </a>
+            <Link href={link} className={`nav-link text-white ${active ? 'active' : ''}`}> {children}</Link>
         </li>
     </>
 }
