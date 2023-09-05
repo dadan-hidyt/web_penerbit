@@ -7,7 +7,7 @@ import BukuPopuler from '@/sections/BukuPopuler';
 import KategoriBukuSection from '@/sections/KategoriBukuSection';
 import { Link, Head } from '@inertiajs/react';
 
-export default function Welcome({ auth, laravelVersion, phpVersion }) {
+export default function Welcome({ auth, kategori_pilihan }) {
     return (
         <>
             <GuestLayout title="Home">
@@ -32,7 +32,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <BukuPopuler />
                     <SectionTitle more={'Lihat Lainya'} link_more={'all'} title={'Kategori'} subtitle={'Lihat Kategori buku di megaperss'} />
                     <KategoriBukuSection />
-                    <SectionTitle more={'Lihat Lainya'} link_more={'all'} title={'Buku Ekonomi'} subtitle={'Lihat buku kategori ekonomi'} />
+                    <SectionTitle more={'Lihat Lainya'} link_more={'all'} title={kategori_pilihan.nama_kategori ?? '?'} subtitle={`Lihat buku kategori ${kategori_pilihan.nama_kategori ?? ''}`} />
                     <BukuEkonomi />
                 </div>
             </GuestLayout>
