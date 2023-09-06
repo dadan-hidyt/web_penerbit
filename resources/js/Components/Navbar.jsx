@@ -1,8 +1,8 @@
 import NavLink from "./Navbar/NavLink";
 
-export default function Navbar({ props }) {
+export default function Navbar({ props,className }) {
     return <>
-        <nav className="navbar text-white navbar-expand-lg bg-body-tertiary">
+        <nav className={`${className} navbar text-white navbar-expand-lg bg-body-tertiary`}>
             <div className="container">
                 <a className="navbar-brand" href="#">
                     <img width={30} height={24} src="https://megapress.co.id/img/logo.png" alt="" />

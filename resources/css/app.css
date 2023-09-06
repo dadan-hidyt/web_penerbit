@@ -49,9 +49,17 @@ body{
     background: rgb(0, 195, 255)!important;
 }
 
+.navbar.default{
+  background: white!important;
+  box-shadow: 0px 0px 8px #dedede;
+}
+
 .hiro_image{
    z-index: -999999px;
    display: none;
+}
+.navbar.default ul li a{
+  color: black!important;
 }
 .bg-soft-blue{
     background-color: rgb(0, 195, 255);

@@ -10,7 +10,7 @@ import { Link, Head } from '@inertiajs/react';
 export default function Welcome({ auth, kategori_pilihan,kategori }) {
     return (
         <>
-            <GuestLayout title="Home">
+            <GuestLayout pageCurrent={'wellcome'} title="Home">
                 <Head title="Welcome" />
                 <Hero kategori={kategori} />
                 <div className="bg-dadan p-4">
