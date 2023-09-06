@@ -1,4 +1,6 @@
-export default function Hero({ props, children }) {
+import { Link } from "@inertiajs/react"
+
+export default function Hero({ props, children,kategori }) {
     return <>
         <section id="hero" className="bg-soft-blue position-relative hero_hero__7Ygjg">
             <div className="container p-5 content">
@@ -45,24 +47,18 @@ export default function Hero({ props, children }) {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Kurikulum Merdeka
+                                --Kategori--
                             </button>
                             <ul className="dropdown-menu" style={{}}>
-                                <li>
-                                    <div className="dropdown-item" style={{ cursor: "pointer" }}>
-                                        Kurikulum Merdeka
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="dropdown-item" style={{ cursor: "pointer" }}>
-                                        Teks K13
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="dropdown-item" style={{ cursor: "pointer" }}>
-                                        Nonteks
-                                    </div>
-                                </li>
+                                {kategori.map(function(e){
+                                    return(
+                                        <li>
+                                            <div className="dropdown-item" style={{ cursor: "pointer" }}>
+                                              <Link style={{ textDecoration : 'none' }}  href={route('buku.kategori', { id: e.id, slug: e.slug })}>  {e.nama_kategori}   </Link>
+                                            </div>
+                                    </li>
+                                    )
+                                })}
                             </ul>
                             <div className="bg-white my-auto" style={{ padding: 9 }}>
                                 <button className="btn btn-primary" type="button">

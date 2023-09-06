@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buku;
+use App\Models\BukuKategori;
 use App\Repository\BukuRepository;
 use Illuminate\Http\Request;
 
@@ -22,8 +23,15 @@ class BukuController extends Controller
             'id_buku' => $id,
         ]);
     }
-    public function katalog(){
+    public function katalog($id = null,$slug = null){
+        $buku = Buku::with('kategori')->get();
+        if ( $id ) {
+            $buku = $this->bukuRepository->getBukuByKategori($id)->with('kategori')->get();
+        }
         return inertia('Katalog',[
+            'current_kategori' =>$id,
+            'kategori' => BukuKategori::all(),
+            'buku' => $buku,
             'title' => "Katalog"
         ]);
     }

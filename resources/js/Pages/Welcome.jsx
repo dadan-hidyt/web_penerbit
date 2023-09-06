@@ -7,12 +7,12 @@ import BukuPopuler from '@/sections/BukuPopuler';
 import KategoriBukuSection from '@/sections/KategoriBukuSection';
 import { Link, Head } from '@inertiajs/react';
 
-export default function Welcome({ auth, kategori_pilihan }) {
+export default function Welcome({ auth, kategori_pilihan,kategori }) {
     return (
         <>
             <GuestLayout title="Home">
                 <Head title="Welcome" />
-                <Hero />
+                <Hero kategori={kategori} />
                 <div className="bg-dadan p-4">
                     <div className="container">
                         <div className="row">

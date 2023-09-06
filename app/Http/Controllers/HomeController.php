@@ -21,6 +21,7 @@ class HomeController extends Controller
     public function __invoke()
     {
         return Inertia::render('Welcome', [
+            'kategori' => BukuKategori::all(['id','nama_kategori','slug']),
             'kategori_pilihan' => BukuKategori::find($this->kategori_pilihan, ['nama_kategori']),
             'buku_kategori_pilihan' => $this->bukuRepository
                 ->getBukuByKategori($this->kategori_pilihan)

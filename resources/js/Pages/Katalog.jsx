@@ -1,7 +1,7 @@
 import CardBukuItem from "@/Components/CardBukuItem";
 import GuestLayout from "@/Layouts/GuestLayout";
 
-export default function Katalog({ props }) {
+export default function Katalog({ props,buku,kategori }) {
     return <>
         <GuestLayout>
             <div className="container katalog">
@@ -25,12 +25,12 @@ export default function Katalog({ props }) {
                                 </div>
                             </div>
                             <div className="row">
-                                <CardBukuItem className="col-4 col-md-3" />
-                                <CardBukuItem className="col-4 col-md-3" />
-                                <CardBukuItem className="col-4 col-md-3" />
-                                <CardBukuItem className="col-4 col-md-3" />
-                                <CardBukuItem className="col-4 col-md-3" />
-                                <CardBukuItem className="col-4 col-md-3" />
+                                {buku ? buku.map(function(row){
+                                    return (
+                                        <CardBukuItem dataBuku={row} className="col-4 col-md-3" />
+                                    )
+                                }) : 'Tidak ada'}
+                            
                             </div>
                         </div>
                     </div>

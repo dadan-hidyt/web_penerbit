@@ -46,7 +46,6 @@ body{
 .navbar{
     z-index: 9;
     border: none;
-    height: 80px;
     background: rgb(0, 195, 255)!important;
 }
 
