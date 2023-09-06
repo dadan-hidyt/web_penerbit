@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',HomeController::class)->name('home');
 
 Route::prefix('buku')->name('buku.')->group(function(){
+    Route::get('/buku/cari',[BukuController::class,'cariBuku'])->name('searchBuku');
     Route::get('/katalog',[BukuController::class,'katalog'])->name('katalog');
     Route::get('/kategori/{id}/{slug}',[BukuController::class,'katalog'])->name('kategori');
     Route::get('/{id}/{slug}',[BukuController::class,'detailBuku'])->name('detail');

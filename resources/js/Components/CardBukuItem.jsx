@@ -5,7 +5,7 @@ export default function CardBukuItem({ props, className,dataBuku}) {
         return <>
         <div className={` ${className ? className : 'col-6 col-md-2'} book_item mb-4`}>
             <div className="bg-white overflow-hidden">
-                <img className="rounded" style={{ width: '100%' }} src={dataBuku.cover ? dataBuku.cover : 'https://placehold.co/800?text=Hello+World&font=roboto'} alt="" />
+                <img className="rounded" style={{ width: '100%',height :'200px',background:'#dedede' }} src={dataBuku.cover ? '/'+dataBuku.cover : 'https://placehold.co/800?text=Hello+World&font=roboto'} alt="" />
                 <div className="book_meta">
                     <span className="badge my-2 bg-warning">{dataBuku?.kategori?.nama_kategori}</span>
                     <span className="title  d-block">

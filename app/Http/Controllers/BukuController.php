@@ -23,6 +23,10 @@ class BukuController extends Controller
             'id_buku' => $id,
         ]);
     }
+    public function cariBuku(Request $request){
+        $q = $request->get('q');
+        return response()->json(['buku'=>$this->bukuRepository->cariBuku($q)]);
+    }
     public function katalog($id = null,$slug = null){
         $buku = Buku::with('kategori')->get();
         if ( $id ) {
