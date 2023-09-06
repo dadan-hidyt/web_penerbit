@@ -1,7 +1,14 @@
 import CardBukuItem from "@/Components/CardBukuItem";
 import GuestLayout from "@/Layouts/GuestLayout";
 
-export default function Katalog({ props,buku,kategori }) {
+export default function Katalog({ props,buku,kategori,from_kategori_search,current_kategori }) {
+    function isFromCategorySearch(){
+        if(from_kategori_search) {
+            return (
+                buku.length > 0 ? <p className="alert alert-warning">Kategori <b>{current_kategori.nama_kategori ?? null}</b> ({buku.length} Buku)</p> : <p className="alert alert-warning">Tidak ada buku untuk kategori <b>{current_kategori.nama_kategori ?? null}</b></p>
+            )
+        }
+    }
     return <>
         <GuestLayout>
             <div className="container katalog">
@@ -24,6 +31,7 @@ export default function Katalog({ props,buku,kategori }) {
                                         <button className="btn btn-primary" type="button" id="button-addon2">Button</button>
                                 </div>
                             </div>
+                            {isFromCategorySearch()}
                             <div className="row">
                                 {buku ? buku.map(function(row){
                                     return (

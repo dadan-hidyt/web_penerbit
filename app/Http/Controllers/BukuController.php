@@ -29,7 +29,8 @@ class BukuController extends Controller
             $buku = $this->bukuRepository->getBukuByKategori($id)->with('kategori')->get();
         }
         return inertia('Katalog',[
-            'current_kategori' =>$id,
+            'current_kategori' =>BukuKategori::find($id),
+            'from_kategori_search' => $id,
             'kategori' => BukuKategori::all(),
             'buku' => $buku,
             'title' => "Katalog"
