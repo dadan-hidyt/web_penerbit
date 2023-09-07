@@ -5,8 +5,9 @@ import ModalButton from "@/Components/Modal/ModalButton";
 import SectionTitle from "@/Components/SectionTitle";
 import GuestLayout from "@/Layouts/GuestLayout";
 import BukuTerkait from "@/sections/BukuTerkait";
+import { Head } from "@inertiajs/react";
 
-export default function DetailBuku({ children, auth, id_buku, slug, detail_buku,buku_terkait }) {
+export default function DetailBuku({ children, auth, id_buku, slug, detail_buku, buku_terkait }) {
     return <>
         <GuestLayout title="detail Buku">
             <BreadCrumb>
@@ -17,7 +18,7 @@ export default function DetailBuku({ children, auth, id_buku, slug, detail_buku,
                 <div className="detail_book mb-3">
                     <div className="bg-white mt-2 p-4 border row rounded">
                         <div className="img_book col-12 col-md-3">
-                            <img src={detail_buku.cover ? '/'+detail_buku.cover : 'https://placehold.co/800?text=Hello+World&font=roboto'} alt="" />
+                            <img src={detail_buku.cover ? '/' + detail_buku.cover : 'https://placehold.co/800?text=Hello+World&font=roboto'} alt="" />
                         </div>
                         <div className="img-detail col-12 col-md-8">
                             <div className="fw-bold fs-4">{detail_buku.judul ?? ''}</div>
