@@ -22,7 +22,7 @@ export default function Navbar({ props,className }) {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <NavLink link="/" active={true}><i className="fa fa-home"></i>&nbsp;Home</NavLink>
                         <NavLink link={route('buku.katalog')} active={false}><i className="fa fa-book"></i>&nbsp;Katalog</NavLink>
-                        <NavLink active={false}><i className="fa fa-question"></i>&nbsp;Profile</NavLink>
+                        <NavLink link={route('profile')} active={false}><i className="fa fa-question"></i>&nbsp;Profile</NavLink>
                     </ul>
                    <div className="d-flex">
                     <button className="btn btn-warning text-white"><i className="fa fa-user"></i>&nbsp;Kontak</button>

@@ -25,3 +25,4 @@ Route::prefix('buku')->name('buku.')->group(function(){
     Route::get('/kategori/{id}/{slug}',[BukuController::class,'katalog'])->name('kategori');
     Route::get('/{id}/{slug}',[BukuController::class,'detailBuku'])->name('detail');
 });
+Route::get('profile',ProfileController::class)->name('profile');
